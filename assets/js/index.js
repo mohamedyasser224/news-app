@@ -22,7 +22,7 @@ async function getNews(country, category){
     console.log(data.results);
     await displayArticels(data.results)
 }
-// getNews('eg','business')
+getNews('eg','business')
 
 function displayArticels(arr){
     newsContainer.innerHTML='';
@@ -58,7 +58,7 @@ for(let i = 0 ; i< countryList.length ; i++){
         activeLink.classList.remove('active');
         e.target.classList.add('active');
         countryCode = e.target.getAttribute('data-country');
-        // getNews(countryCode,categoryCode)  
+        getNews(countryCode,categoryCode)  
         
     })
 }
@@ -68,7 +68,7 @@ for(let i = 0 ; i< categoryList.length ; i++){
         activeLink.classList.remove('active');
         e.target.classList.add('active');
         categoryCode = e.target.getAttribute('data-category');
-        // getNews(countryCode,categoryCode)  
+        getNews(countryCode,categoryCode)  
         
     })
 }
