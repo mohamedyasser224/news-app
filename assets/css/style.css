@@ -1,0 +1,49 @@
+:root {
+  font-family: "Parkinsans", sans-serif;
+  --navbar-height: auto;
+}
+
+nav a,
+aside a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px;
+}
+nav .active {
+  background-color: blue;
+  border-radius: 5px;
+}
+nav {
+  height: var(--navbar-height);
+}
+aside {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: var(--navbar-height);
+  padding-inline: 10px;
+  background-color: rgb(46, 45, 45);
+}
+aside .active {
+  background-color: blue;
+  border-radius: 5px;
+}
+
+aside a{
+    display: inline-block;
+    width: 100%;
+}
+main {
+  width: calc(100% - 200px);
+  position: absolute;
+  left: 200px;
+  top: var(--navbar-height);
+}
+.news-container img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    cursor: pointer;
+}
+
